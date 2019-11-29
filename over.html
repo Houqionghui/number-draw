@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link rel="stylesheet" href="./css/over.css">
+  <!-- <link rel="stylesheet" href="./css/over.css"> -->
   <style>
 
   </style>
@@ -14,19 +14,18 @@
 </head>
 
 <body>
-
   <div class="contextbox">
     <!-- <div class="contextbox-title">恭喜您中奖啦!</div> -->
     <div class="boxmonry">恭喜您一共获得 <span id="money"></span>元</div>
-  
+      <div class="againPlay">再玩一次</div>
   </div>
 </body>
 <script>
   (function (doc) {
     let money = doc.querySelector('#money'),
       price = sessionStorage.getItem('resultTotalPrice');
-
     money.innerHTML = price;
+
   }(document));
 </script>
 

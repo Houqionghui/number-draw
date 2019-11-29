@@ -7,6 +7,7 @@
   <title>抽奖</title>
   <link rel="stylesheet" href="./css/draw.css">
   <link rel="stylesheet" href="./css/reset.min.css">
+  <link rel="stylesheet" href="./css/over.css">
 </head>
 <body>
   <div class="wrapper">
@@ -68,9 +69,28 @@
         <button class="gameOver">退出</button>
       </div>
     </div>
+    <div class="describe">编号1～100的100个数字,结果在挑战范围内,即获得奖励</div>
   </div>
-  <div class="describe">编号1～100的100个数字,结果在挑战范围内,即获得奖励</div>
+ 
+
+  <div class="contextbox">
+    <!-- <div class="contextbox-title">恭喜您中奖啦!</div> -->
+    <div class="boxmonry">恭喜您一共获得 <span id="money"></span>元</div>
+      <div class="againPlay">再玩一次</div>
+  </div>
+
   <script src="./js/draw.js"></script>
+  <script src="./js/jquery-1.11.0.min.js"></script>
+  <script>
+  (function (doc) {
+    let money = doc.querySelector('#money'),
+      price = sessionStorage.getItem('resultTotalPrice');
+    money.innerHTML = price;
+    $('.againPlay').click(function(){
+      window.location.reload();
+    })
+  }(document));
+  </script>
 </body>
 
 </html>

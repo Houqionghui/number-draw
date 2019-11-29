@@ -122,9 +122,12 @@
   // 返回到结果页
   function backPage() {
     console.log(totalPrice);
-    
     sessionStorage.setItem('resultTotalPrice', totalPrice);
-    window.location.href = "over.html";
+    // window.location.reload();
+    // window.location.href = "over.html";
+    $('.wrapper').fadeOut(500)
+    $('.contextbox').fadeIn(500)
+   
   }
 
   // 给小于10的数字加上0
