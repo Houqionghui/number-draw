@@ -76,20 +76,23 @@
   <div class="contextbox">
     <!-- <div class="contextbox-title">恭喜您中奖啦!</div> -->
     <div class="shade"></div>
-    <div class="boxmonry">恭喜您一共获得 <span id="money"></span>元</div>
+    <div class="boxmonry">
+     
+      
+    </div>
       <div class="againPlay">再玩一次</div>
   </div>
   <script src="./js/draw.js"></script>
   <script src="./js/jquery-1.11.0.min.js"></script>
   <script>
-  (function (doc) {
-    let money = doc.querySelector('#money'),
-      price = sessionStorage.getItem('resultTotalPrice');
-    money.innerHTML = price;
-    $('.againPlay').click(function(){
-      window.location.reload();
-    })
-  }(document));
+  // (function (doc) {
+  //   let money = doc.querySelector('#money'),
+  //     price = sessionStorage.getItem('resultTotalPrice');
+  //   money.innerHTML = price;
+  //   $('.againPlay').click(function(){
+  //     window.location.reload();
+  //   })
+  // }(document));
   </script>
 </body>
 
