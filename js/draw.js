@@ -128,6 +128,9 @@
     $('.boxmonry').html(`
     <div class="total"> 恭喜您一共获得 <span id="money">${totalPrice}</span>积分</div>
     `)
+    $('.againPlay').click(function(){
+          window.location.reload();
+        })
     $('.wrapper').fadeOut(500)
     $('.contextbox').fadeIn(500)
    
