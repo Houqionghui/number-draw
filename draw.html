@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>抽奖</title>
+  <link rel="stylesheet" href="./css/draw.css">
+  <link rel="stylesheet" href="./css/reset.min.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="title">
+      <img src="./img/toubj.png" alt="">
+      <span>投资者小测试</span>
+    </div>
+    <div class="drawbox">
+      <div class="passbox">
+        <div class="pass">
+          第<span class="checkpoints">1</span>关 (共8关)
+        </div>
+      </div>
+      <div class="contextBox">
+        <h1 style="color:#fff">抽奖结果</h1>
+        <div class="wire"></div>
+        <div class="Result">
+          <span class="ResultNum">00</span>
+        </div>
+        <div class="contextBox-img">
+          <img src="./img/yuanbj.png" alt="">
+        </div>
+        <div class="Button">
+          <input type='button' class="btn" value='点击开始' />
+        </div>
+      </div>
+    </div>
+
+    <div class="bg_color" id="bg_filter">
+      <div class="gain" id="gain">
+       <div class="gain-item">
+        <img class="imges" src="./img/bj.png" alt="">
+        <div class="gainbox">恭喜您，累积获得 <span id="total">0</span> 积分</div>
+        <div class="text-box">
+          <div>进入下一关，抽出的数字<span class="less-than">小于</span><span class="money"></span>,奖金数将增加至<span
+              id="addMoney"></span>积分</div>
+          <div class="div2">若抽出的数字<span class="less-than">大于</span><span id="smallMoney"></span>,将结束游戏</div>
+          <div class="div3">结束游戏: 提现钱袋里已有的钱</div>
+          <div class="div4">继续游戏，冲击更高的奖励</div>
+        </div>
+        <div class="btnbox">
+          <p>请问您是否选择进入下一关？</p>
+          <button id="cancel">否</button>
+          <button id="confirm">是</button>
+        </div>
+       </div>
+      </div>
+    </div>
+
+    <div class="minus"></div>
+
+    <div class="nothing-wrap" id="nothing">
+      <div class="nothing-main">
+        <div class="nothingbox">
+          您抽中了：
+          <span class="lastPrice">0</span>
+          ,很遗憾, 未中奖!
+        </div>
+        <button class="gameOver">退出</button>
+      </div>
+    </div>
+  </div>
+  <div class="describe">编号1～100的100个数字,结果在挑战范围内,即获得奖励</div>
+  <script src="./js/draw.js"></script>
+</body>
+
+</html>

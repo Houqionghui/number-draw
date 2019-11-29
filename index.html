@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/style.css">
+ 
+  <script>
+    ~ function () {
+      computedFont();
+      window.addEventListener('resize', computedFont, false);
+
+      function computedFont() {
+        var deviceW = document.documentElement.clientWidth;
+        if (deviceW > 640) return;
+        document.documentElement.style.fontSize = deviceW / 640 * 100 + 'px';
+      }
+    }();
+  </script>
+  <style>
+    body {
+      overflow: hidden;
+    }
+
+    .whole .dc_tit1 {
+      position: absolute;
+      z-index: 1;
+      color:#fff;
+      font-size: 18px;
+    }
+  </style>
+
+</head>
+
+<body>
+      
+  <div class="whole ">
+    <div class="dc_tit1 ">
+      游戏规则：</br>
+      游戏共有8关，每关的奖励数值不同<br>
+      在每一轮开始前，需要选择是否进入下一轮<br>
+      可以有以下两个选择：<br>
+      1．是提现钱袋里已有的钱<br>
+      2．继续游戏，冲击更高的奖励。但若失败，会损失所有的钱。<br>
+    </div>
+    <div class="pc_img ">
+      <!-- <img id="gif"/> -->
+    </div>
+
+    <a href="draw.html">
+      <div class="btn">开始测试</div>
+    </a>
+  </div>
+  <script language="javascript" type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
+  <script language="javascript" type="text/javascript">
+    $(document).ready(function () {
+      $(".dc_tit1").animate({
+        left: 87 + 'vw',
+      }, 1500);
+    });
+  </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,342 @@
+
+body {
+    width: 100%;
+    /* background: url(../img/beij.png) no-repeat; */
+    /* background-color: #5c2b81; */
+     background-image: -webkit-gradient(linear, 60% 3%, 40% 75%,
+     from(#65328c),
+        to(#67328a),
+        color-stop(0.5,#804ba6));
+       
+        /* background-image: radial-gradient(#bd6bfc, #5c2b81); */
+        /* background-image: radial-gradient(circle at 4% 90%, #af76db 10%, #5c2b81 80%); */
+    background-size: 100% 100%;
+    height:100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+  }
+ 
+
+
+  
+  .title {
+    width: 354px;
+    position: relative;  
+    padding-bottom: 5px;
+    padding-top: 15px;
+    margin: 0 auto;
+  }
+
+  .title  img{
+    width: 280px;
+    display:block;
+    margin: 0 auto;
+  }
+
+  .title span{
+    position: absolute;
+    top: 22px;
+    left: 87px;
+    font-size: 30px;
+    color: #3f0869;
+    font-weight: 500;
+    line-height: 51px;
+    
+  }
+  
+  h1 {
+    font-size: 25px;
+    text-align: center;
+  }
+  
+  .contextBox{
+    margin-top: 15px;
+    position: relative;
+
+  }
+  .Result {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 40px;
+    background-color:rgba(139, 139, 49, 0);
+   
+}
+ 
+.contextBox-img img{
+position: absolute;
+top: 60px;
+left: 0;
+right: 0;
+  width: 270px;
+  display: block;
+  margin: 0 auto;
+}
+  
+  .ResultNum {
+    text-align: center;
+    font-size: 90px;
+    font-family: Verdanal;
+    line-height: 220px;
+    color: #ffc738;
+  }
+  
+  .Button {
+    padding-top: 50px;
+    margin: 0 auto;
+    width: 120px;
+  
+  }
+.describe{
+  width: 300px;
+  margin: 0 auto;
+  font-size: 14px;
+  color: #fff;
+  margin-top: 15px;
+}
+
+
+  .btn {
+    width: 120px;
+    height: 120px;
+    border-radius: 150px;
+    margin: 0 auto;
+    font-size: 25px;
+    background-color:#ffc738;
+    color: #5c2b81;
+    border: 0;
+  }
+  
+  .btn:active {
+    background-color: #e9dbf3;
+  }
+  
+  .gain {
+    position: relative;
+    width: 420px;
+    height: 440px;
+    /* position: fixed; */
+    top: 120px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 300px;
+  
+  }
+  
+  .gain-item{
+    width: 100%;
+    height: 440px;
+    margin: 0 auto;
+    background-color:rgba(255, 255, 255, 0.979);
+  }
+  
+  .gain .gainbox {
+    font-size: 20px;
+    padding: 90px 0 10px;
+    text-align: center;
+  }
+  
+  .gain p {
+    font-size: 18px;
+  }
+  
+  .gain .imges {
+    width: 200px;
+    position: absolute;
+    top: -63px;
+    left: 45px;
+    right: 0;
+  }
+  
+  .btnbox {
+    width: 300px;
+    text-align: center;
+  }
+  .btnbox p{
+    font-size: 15px;
+    background-color: #fde50b60;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .btnbox button {
+    width: 100px;
+    height: 30px;
+    background-color: #fff9eb;
+    margin-right: 10px;
+    border-radius: 50px;
+    transition: background .2s;
+  }
+  
+  .btnbox button:active {
+    background: #d6d6d4;
+  }
+  
+
+
+  .contextBox .wire{
+    width: 80px;
+    height: 2px;
+    background-color: #fff;
+    margin: 0 auto;
+  }
+
+  .contextBox h1{
+    font-size: 28px;
+    
+  }
+
+  #confirm{
+    background-color:#65328c;
+    color: #fff;
+    font-size: 16px;
+    border: 0;
+   
+  }
+  #cancel{
+    background-color: #fff;
+    color: #65328c;
+    font-size: 16px;
+    border: 0;
+    border: 1px solid #65328c;
+  }
+  #total {
+    color: red;
+    font-size: 22px;
+  }
+  .minus{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.836);
+  }
+  
+  /* 未中奖 */
+  .nothing-wrap {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.836);
+  }
+  
+  .nothing-main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #33684a;
+    border-radius: 5px;
+    text-align: center;
+    overflow: hidden;
+    z-index: 999;
+  }
+  
+  .nothingbox {
+    height: 155px;
+    line-height: 155px;
+    color: rgb(36, 12, 12);
+    background-color: #fff;
+    font-size: 18px;
+  }
+  
+  .gameOver {
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    background: #65328c;
+    color: #fff;
+    font-size: 15px;
+  }
+  
+  .bg_color {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000d0;
+    top: 0;
+    /* z-index: 9; */
+  }
+  
+  .text-box {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0 15px;
+    font-size: 15px;
+    /* background: #fbc8df; */
+    border: 1px solid #65328c;
+    border-radius: 20px;
+    color: #000;
+  }
+  
+  .text-box div{
+  /* line-height: 25px; */
+  padding-bottom: 10px;
+  }
+  .bg_defeated {
+    width: 100%;
+    height: 100%;
+    background: #000000d0 !important;
+    position: fixed !important;
+    top: 0;
+    z-index: 99;
+    display: none;
+  }
+
+  .text-box .less-than{
+    color: red;
+    font-size: 17px;
+  }
+  .text-box .money{
+    color: red;
+    font-size: 17px;
+  }
+  .text-box #addMoney{
+    color: red;
+    font-size: 17px;
+  }
+  .text-box #smallMoney{
+    color: red;
+    font-size: 17px;
+  }
+  
+  .passbox {
+    margin-left: 30px;
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    width: 126px;
+    height: 30px;
+    background-color: #ffc738;
+    text-align: center;
+    color: #65358a;
+    line-height: 30px;
+    border-radius: 50px
+  }
+
+
+
+  .wrapper img{
+    /* width: 47%;
+    height: 100%;
+    margin: 0 auto;
+    display: block; */
+
+  }
