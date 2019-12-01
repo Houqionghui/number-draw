@@ -23,45 +23,63 @@
     body {
       overflow: hidden;
     }
-
-    .whole .dc_tit1 {
-      position: absolute;
-      z-index: 1;
-      color:#fff;
-      font-size: 18px;
-    }
   </style>
-
 </head>
-
 <body>
-      
   <div class="whole ">
-    <div class="dc_tit1 ">
-      游戏规则：</br>
-      游戏共有8关，每关的奖励数值不同<br>
-      在每一轮开始前，需要选择是否进入下一轮<br>
-      可以有以下两个选择：<br>
-      1．是提现钱袋里已有的钱<br>
-      2．继续游戏，冲击更高的奖励。但若失败，会损失所有的钱。<br>
+    <div class="imges">
+      <img src="./img/标题.png" alt="">
     </div>
-    <div class="pc_img ">
-      
-    </div>
-
+    <div class="regular">游戏规则</div> 
+    <div class="earn">积分攻略</div>
     <a href="draw.html">
       <div class="btn">
         <img src="./img/btn.png" alt="">
       </div>
     </a>
   </div>
+
+  <div class="game-regular"> 
+      <div class="dc_tit1 ">
+          <div class="dc_tit1-item">  
+           <h1>游戏规则</h1>
+           游戏共有8关，每关的奖励数值不同<br>
+           每次游戏将会耗费20积分<br>
+           在每一轮开始前，需要选择是否进入下一轮<br>
+           可以有以下两个选择：<br>
+           1．得到赢得的积分。<br>
+           2．继续游戏，冲击更高的奖励。但若失败，会损失所有的积分。<br>
+          </div>
+         </div>
+        <div class="goBack">返回游戏</div> 
+  </div>
+
+  <div class="gameStrategy">
+    <div class="dc_tit2">
+      <div class="dc_tit2-item">
+         1、 阅读新闻,每条新闻阅读时间超过20秒,将获得10积分,每日最高获得100积分<br>
+          2、玩游戏赚取积分
+      </div>
+    </div>
+    <div class="goBack">返回游戏</div> 
+  </div>
+
   <script language="javascript" type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
   <script language="javascript" type="text/javascript">
-    $(document).ready(function () {
-      $(".dc_tit1").animate({
-        left: 87 + 'vw',
-      }, 1500);
-    });
+   $('.regular').click(function(){
+    $('.whole').fadeOut(500)
+      $('.game-regular').fadeIn(500)
+   })
+
+   $('.goBack').click(function(){
+     window.location.reload();
+   })
+
+   $('.earn').click(function(){
+    $('.whole').fadeOut(500)
+    $('.game-regular').fadeOut(500)
+    $('.gameStrategy').fadeIn(500)
+   })
   </script>
 </body>
 

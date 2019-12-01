@@ -19,17 +19,19 @@
     countdown = null, // 延时
     timer = null, // 计时
     flag = true; // 防止在弹窗出来之前再次点击开始
+    flag2=true;
 
   // 概率 奖励 惩罚列表
-  let probability = [70, 67, 64, 61, 58, 55, 52, 49],
-    punishment = [25, 50, 80, 120, 188, 388, 588, 888];
+  // let probability = [70, 67, 64, 61, 58, 55, 52, 49],
+  let probability = [100, 100, 100, 100, 100, 100, 100, 100],
+        punishment = [25, 50, 80, 120, 188, 388, 588, 888];
   function init() {
     bindEvent(); // 绑定事件
   }
   function bindEvent() {
     oStartBtn.addEventListener('click', startGame, false);
     oNextBtn.addEventListener('click', closePopup, false);
-    oBackResult.addEventListener('click', backPage, false);
+    oBackResult.addEventListener('click', backPage,  false);
     oOver.addEventListener('click', function () {
       window.location.reload();
     }, false);
@@ -47,8 +49,7 @@
           if (flag) {
             oStartBtn.value = '点击停止';
             timer = setInterval(function () {
-              curPrice = Math.floor(Math.random() * (maxNum)) + 1;
-    
+              curPrice = Math.floor(Math.random() * (maxNum)) -1;
               oResultNums.style.cssText = 'font-size: 90px;'
               oResultNums.innerHTML = autoForma(curPrice);
             }, 50);
@@ -62,11 +63,10 @@
     clearTimeout(countdown);
     countdown = null;
     curLevel++;
-    if (curLevel == 8) {
-      setTimeout(function () {
-        backPage();
-      }, 500)
-    }
+    // if (curLevel == 8) {
+    //   // notSure();
+      
+    // }
     oCheckpoint.innerHTML = curLevel;
     oNextPopup.style.display = 'none';
     oResultNums.style.cssText = 'font-size: 80px;'
@@ -80,9 +80,13 @@
   function successful(price = 10) {
     totalPrice = price;
     oTotal.innerHTML = totalPrice; //已中金额
-
     countdown = setTimeout(function () {
-      oNextPopup.style.display = 'block';
+      if(curLevel===8){
+        backPage();
+      }else{
+        oNextPopup.style.display = 'block';
+      }
+     
     }, 800);
   }
 
@@ -104,36 +108,41 @@
    * @param { Number } reward 每次奖励的金额
    */
   function notSure(level, price) {
-    let popupTipsLevel = probability[level], // 小于这个金额才会增加
+    let popupTipsLevel = probability[level-1], // 小于这个金额才会增加
       popupTipsReward = punishment[level - 1]; // 每次奖励的金额
-
-
     if (price <= popupTipsLevel) {
       // 弹窗里大于数字
       oMoney.innerHTML = popupTipsLevel; // 如果大于 xx
       addMoney.innerHTML = punishment[level]; // 增加至 xx 元
       smallMoney.innerHTML = popupTipsLevel; // 如果小于 xx
-
       successful(popupTipsReward, popupTipsLevel);
     } else {
       failure(popupTipsLevel);
+    
     }
   }
   // 返回到结果页
   function backPage() {
-    console.log(totalPrice);
-    sessionStorage.setItem('resultTotalPrice', totalPrice);
-    // window.location.reload();
-    // window.location.href = "over.html";
-    $('.boxmonry').html(`
-    <div class="total"> 恭喜您一共获得 <span id="money">${totalPrice}</span>积分</div>
-    `)
-    $('.againPlay').click(function(){
-          window.location.reload();
-        })
-    $('.wrapper').fadeOut(500)
-    $('.contextbox').fadeIn(500)
-   
+    if(flag2){
+      console.log(totalPrice);
+      sessionStorage.setItem('resultTotalPrice', totalPrice);
+      if(curLevel===8){
+        $('.boxmonry').html(`
+        <div class="total">恭喜您顺利通过所有关卡,您一共获得 <span id="money">${totalPrice}</span>积分</div>
+        `)
+      }else{
+        $('.boxmonry').html(`
+        <div class="total"> 恭喜您一共获得 <span id="money">${totalPrice}</span>积分</div>
+        `)
+      }
+     
+      $('.againPlay').click(function(){
+            window.location.reload();
+          })
+      $('.wrapper').fadeOut(500)
+      $('.contextbox').fadeIn(500)
+    }
+    flag2 = false;
   }
 
   // 给小于10的数字加上0
