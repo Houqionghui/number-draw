@@ -2,13 +2,14 @@
 .contextbox{
     position: fixed;
     width: 100%;
+    position: relative;
     background: url(../img/overbj.png) no-repeat;
      background-size: 100% 100%;
      height: 100vh;
      overflow: hidden;
 }
 .boxmonry{
-    width: 80%;
+    width: 70%;
     height: 200px;
     margin: 0 auto;
     position: absolute;
@@ -17,21 +18,22 @@
     right: 0;
     background:url(../img/组\ 286.png) no-repeat;
     background-size: 100% 100%;
-    text-align: center;
+  
     color: #000000;
-    font-size: 25px;
+    font-size: 18px;
     z-index: 2;
 }
 .boxmonry .total{
-    /* line-height: 280px; */
-    padding-top: 100px;
+     width: 80%;
+    margin: 0 auto;
+    padding-top: 110px;
 }
 .boxmonry span{
     color: red;
 }
 #money{
     color: red !important;
-    font-size: 30px;
+    font-size: 20px;
 }
 .shade{
     width: 100%;
@@ -47,7 +49,7 @@
     height: 50px;
     margin: 0 auto;
     position: absolute;
-    bottom: 260px;
+    bottom:30%;
     right: 0;
     left: 0;
     z-index: 2;
