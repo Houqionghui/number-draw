@@ -44,6 +44,8 @@ button,input,select,textarea{font-size:100%; visibility:hidden;  -webkit-appeara
   height: 100%;
   display: block;
   margin: 0 auto;
+  padding-top: 30px;
+
 }
 
 .game-regular{
@@ -137,6 +139,7 @@ button,input,select,textarea{font-size:100%; visibility:hidden;  -webkit-appeara
   text-align: center;
   margin-top: 50px;
   line-height: 50px;
+  border-radius: 10px;
 }
 
 .earn{
@@ -149,6 +152,7 @@ button,input,select,textarea{font-size:100%; visibility:hidden;  -webkit-appeara
   text-align: center;
   line-height: 50px;
   margin-top: 40px;
+  border-radius: 10px;
 }
 
 .gameStrategy{

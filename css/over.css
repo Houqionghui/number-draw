@@ -60,5 +60,7 @@
     font-size: 18px;
   }
   .againPlay img{
-      width: 230px;
+      width: 180px;
+      display: block;
+      margin: 0 auto;
   }
