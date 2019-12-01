@@ -1,5 +1,4 @@
 
-
 /*首页2*/
 .whole{
   position: fixed;
@@ -8,7 +7,8 @@
   background: url(../img/overbj.png) no-repeat;
   background-size: 100% 100%;
   z-index: 2;
-  position: relative;
+  /* position: relative; */
+
 }
 .whole .imges img{
   width: 80%;
