@@ -1,35 +1,6 @@
-body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,form,input,legend,button,textarea{margin:0;padding:0; vertical-align: baseline; background: transparent; border: 0; outline: 0; }
-ul,li{ float:left; font-family:"微软雅黑"; color:#6e5b2e;}
-body,button,input,select,textarea{font:12px/1.5 tahoma,arial,\5b8b\4f53,sans-serif;  font-family:"微软雅黑";}
-h1,h2,h3,h4,h5,h6{font-size:100%;}
-address,cite,dfn,em,var{font-style:normal;}
-code,kbd,pre,samp{font-family:courier new,courier,monospace;}
-small{font-size:12px;}ul,ol{list-style:none;}
-a{text-decoration:none;}
-a:hover{text-decoration:none;}
-a:visited{ color:#000;}
-sup{vertical-align:text-top;}
-sub{vertical-align:text-bottom;}
-legend{color:#000;}fieldset,img{border:0;}
-legend{color:#000;}fieldset,img{border:0;}
-table{border-collapse:collapse;border-spacing:0;}
-input[type="checkbox"]{-webkit-appearance:checkbox !important;}
-button,input,select,textarea{font-size:100%; visibility:hidden;  -webkit-appearance:none;}
-* {
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-.clearfix:after {
-    display: block;
-    height: 0;
-    content: "";
-    clear: both
-}
-
 
 
 /*首页2*/
-
 .whole{
   position: fixed;
   width: 100%;
