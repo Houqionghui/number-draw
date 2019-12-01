@@ -31,13 +31,13 @@ button,input,select,textarea{font-size:100%; visibility:hidden;  -webkit-appeara
 /*首页2*/
 
 .whole{
+  position: fixed;
   width: 100%;
   height: 100vh;
-  position: fixed;
-  position: relative;
   background: url(../img/overbj.png) no-repeat;
   background-size: 100% 100%;
   z-index: 2;
+  position: relative;
 }
 .whole .imges img{
   width: 80%;
@@ -49,9 +49,9 @@ button,input,select,textarea{font-size:100%; visibility:hidden;  -webkit-appeara
 }
 
 .game-regular{
+  position: fixed;
   width: 100%;
   height: 100vh;
-  position: fixed;
   position: relative;
   background: url(../img/overbj.png) no-repeat;
   background-size: 100% 100%;
@@ -156,9 +156,9 @@ button,input,select,textarea{font-size:100%; visibility:hidden;  -webkit-appeara
 }
 
 .gameStrategy{
+  position: fixed;
   width: 100%;
   height: 100vh;
-  position: fixed;
   position: relative;
   background: url(../img/overbj.png) no-repeat;
   background-position: center;

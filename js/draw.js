@@ -49,7 +49,7 @@
           if (flag) {
             oStartBtn.value = '点击停止';
             timer = setInterval(function () {
-              curPrice = Math.floor(Math.random() * (maxNum)) -1;
+              curPrice = Math.floor(Math.random() * (maxNum))+1;
               oResultNums.style.cssText = 'font-size: 90px;'
               oResultNums.innerHTML = autoForma(curPrice);
             }, 50);
