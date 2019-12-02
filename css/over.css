@@ -2,11 +2,10 @@
 .contextbox{
     position: fixed;
     width: 100%;
-    position: relative;
     background: url(../img/overbj.png) no-repeat;
      background-size: 100% 100%;
      height: 100vh;
-     overflow: hidden;
+     /* overflow: hidden; */
 }
 .boxmonry{
     width: 70%;

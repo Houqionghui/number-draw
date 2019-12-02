@@ -86,8 +86,6 @@
   right: 0;
   left: 0;
   bottom: 200px;
- /* margin-top: 40px; */
-
 }
 .btn img{
   width: 230px;
@@ -95,8 +93,6 @@
   margin:  0 auto;
 }
 .cfm_btn{ width:70%; height:12vw; position:absolute;top: 60vw;left: 15vw;}
-
-
 
 .regular{
   width: 180px;

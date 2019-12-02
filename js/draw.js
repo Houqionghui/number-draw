@@ -22,8 +22,8 @@
     flag2=true;
 
   // 概率 奖励 惩罚列表
-  // let probability = [70, 67, 64, 61, 58, 55, 52, 49],
-  let probability = [100, 100, 100, 100, 100, 100, 100, 100],
+  let probability = [70, 67, 64, 61, 58, 55, 52, 49],
+  // let probability = [100, 100, 100, 100, 100, 100, 100, 100],
         punishment = [25, 50, 80, 120, 188, 388, 588, 888];
   function init() {
     bindEvent(); // 绑定事件
